@@ -1,5 +1,3 @@
-# ethereum-private-network
-
 # Building Ethereum
 
 ## Installation Instructions for Mac
@@ -30,19 +28,18 @@ You should now be able to run ```geth``` and connect to the network.
 
 Make sure to check the different options and commands with ```geth --help```
 
-You can alternatively install only the geth CLI with ```apt-get install geth``` if you don't want to install the other utilities (bootnode, evm, disasm, rlpdump, ethtest).
+You can alternatively install only the geth CLI with ```sudo apt-get install geth``` if you don't want to install the other utilities (bootnode, evm, disasm, rlpdump, ethtest).
 
 
 ### Installation Instructions for  Fedora 22
 
-1. Download Go language Linux binary tar.gz package here: https://golang.org/dl/
-2. Follow Golang installation instructions here: https://golang.org/doc/install
-3. dnf install automake make gcc gcc-c++ git gmp-devel kernel-devel
+1. sudo dnf install golang
+2. dnf install automake make gcc gcc-c++ git gmp-devel kernel-devel
 Run the following commands as a normal (non-root) user following instructions here https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu:
 
-4. git clone https://github.com/ethereum/go-ethereum
-5. cd go-ethereum
-6. make geth
+3. git clone https://github.com/ethereum/go-ethereum
+4. cd go-ethereum
+5. make geth
 
 To run geth, enter this command in a command line terminal from your normal user account:
 

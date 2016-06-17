@@ -131,3 +131,25 @@ In pull request into "static-nodes.json" add your enode like:
 "enode://pubkey@ip:10001",
 ]
 ```
+
+#Introduction to writing smart contracts
+
+To write a smart contracts I use solidity browser.
+You can use solidity browser on web:
+
+https://ethereum.github.io/browser-solidity/
+```
+... --rpccorsdomain "http://23.94.171.200:3000, https://ethereum.github.io" ...
+```
+
+or run him on you localhost:
+
+```
+git clone -b gh-pages https://github.com/ethereum/browser-solidity.git
+cd browser-solidity
+python -m SimpleHTTPServer
+```
+Run geth with parameters:
+```
+... --rpccorsdomain "http://23.94.171.200:3000, http://localhost:8000"
+```

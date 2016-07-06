@@ -67,7 +67,9 @@ Use this to make sure that your node is not discoverable by people who do not ma
 ```
 Use maxpeers 0 if you do not want anyone else connecting to your test chain. Alternatively, you can adjust this number if you know exactly how many peers you want connecting to your private chain.
 ```
-geth --genesis genesis.json --datadir ethereum-private/ --networkid 9876 --nodiscover --maxpeers 0 console
+geth init genesis.json
+
+geth --datadir ethereum-private/ --networkid 9876 --nodiscover --maxpeers 0 console
 ```
 
 Create a new account on the console:
@@ -100,7 +102,7 @@ This is the "network listening port", which you will use to connect with other p
 ```
 This will enable RPC interface on your node. This is generally enabled by default in Geth.
 ```
---rpccorsdomain "http://23.94.171.200:3000"
+--rpccorsdomain "http://23.94.171.200:3030"
 ```
 This dictates what URLs can connect to your node in order to perform RPC client tasks.
 ```
@@ -110,13 +112,13 @@ Network identifier
 
 Run geth:
 ```
- geth --genesis genesis.json --datadir ethereum-private/ --networkid 9876 --rpc --rpccorsdomain "http://23.94.171.200:3000" --unlock=0 --port "10001" console
+ geth --datadir ethereum-private/ --networkid 9876 --rpc --rpccorsdomain "http://23.94.171.200:3030" --unlock=0 --port "10001" console
 ```
 Note: Genesis block must be:
 ```
 Successfully wrote custom genesis block: dd8a406402626663a5a1a319408ab278c995d037f313fe20e8c670c6c093c3b4
 ```
-Go to http://23.94.171.200:3000 in you browser.
+Go to http://23.94.171.200:3030 in you browser.
 
 
 To add you to our private network, send your static node. in console run:
@@ -139,7 +141,7 @@ You can use solidity browser on web:
 
 https://ethereum.github.io/browser-solidity/
 ```
-... --rpccorsdomain "http://23.94.171.200:3000, https://ethereum.github.io" ...
+... --rpccorsdomain "http://23.94.171.200:3030, https://ethereum.github.io" ...
 ```
 
 or run him on you localhost:
@@ -151,5 +153,5 @@ python -m SimpleHTTPServer
 ```
 Run geth with parameters:
 ```
-... --rpccorsdomain "http://23.94.171.200:3000, http://localhost:8000"
+... --rpccorsdomain "http://23.94.171.200:3030, http://localhost:8000"
 ```
